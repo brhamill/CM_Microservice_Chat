@@ -10,6 +10,7 @@ const userSessionResolver = async (
   context: ResolverContext
 ) => {
   if (args.me !== true) throw new Error('Unsupported argument value!')
+  console.log(context.res.locals.userSession)
   return context.res.locals.userSession
 }
 

@@ -1,5 +1,6 @@
-import UsersService from '#root/adapters/UsersService'
+import UsersService, { User } from '#root/adapters/UsersService'
 import { UserSessionType } from '#root/graphql/types'
+import { userSession } from './Query'
 
 const UserSession = {
   user: async (userSession: UserSessionType) => {
